@@ -11,6 +11,18 @@ public class Calculadora {
         return a - b;
     }
 
+    public static double dividir(double dividendo, double divisor) {
+        if (divisor == 0) {
+            System.out.println("Error: No se puede dividir entre 0");
+            return 0;
+        }
+        return dividendo / divisor;
+    }
+
+    public static double multiplicar(double numero1, double numero2) {
+        return numero1 * numero2;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("=== Bienvenido a la Calculadora ===");
@@ -25,7 +37,7 @@ public class Calculadora {
             System.out.println("4. Dividir");
             System.out.println("5. Salir");
             System.out.print("Selecciona una opción (1-5): ");
-            
+
             String opcion = scanner.nextLine();
 
             if (opcion.equals("5")) {
